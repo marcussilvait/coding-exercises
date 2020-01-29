@@ -17,9 +17,7 @@ def contar_caracteres(s):
     resultado = {}
 
     for caracter in s:
-        contagem = resultado.get(caracter, 0)
-        contagem += 1
-        resultado[caracter] = contagem
+        resultado[caracter] = resultado.get(caracter, 0) + 1
 
     return resultado
 
