@@ -27,11 +27,8 @@ class Solution:
         :param S:
         :return:
         '''
-        count = 0
-        for i in S:
-            if i in J:
-                count += 1
-        return count
+        lst = [i for i in S if i in J]
+        return len(lst)
 
 
 if __name__ == '__main__':
