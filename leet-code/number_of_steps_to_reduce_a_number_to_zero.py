@@ -30,28 +30,29 @@ class Solution:
 
         Constraints:
         0 <= num <= 10^6
+
         >>> Solution().number_of_steps(14)
         6
+
         >>> Solution().number_of_steps(8)
         4
+
         >>> Solution().number_of_steps(123)
         12
 
-        :param num:
+        :param num: int
         :return: int
         '''
 
         step = 0
-        num = int(num)
-        while num > 0:
+        while num != 0:
             if num % 2 != 0:
                 num -= 1
-                step += 1
-                continue
-            num = num / 2
+            else:
+                num /= 2
             step += 1
+
         return step
 
 if __name__ == '__main__':
-
     print(Solution().number_of_steps(123))
