@@ -13,7 +13,6 @@ def contar_caracteres(s):
 
     '''
 
-
     resultado = {}
 
     for caracter in s:
