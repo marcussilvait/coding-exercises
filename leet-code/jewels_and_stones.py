@@ -25,7 +25,7 @@ class Solution:
 
         :param J:
         :param S:
-        :return:
+        :return: int
         '''
         lst = [i for i in S if i in J]
         return len(lst)
