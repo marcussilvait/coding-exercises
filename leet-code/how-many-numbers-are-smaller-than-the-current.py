@@ -31,7 +31,8 @@ class Solution:
         :param nums: list of int
         :return: list of int
         """
-
+        # setdefault(key[, default]): If key is in the dictionary,return its value. If not,
+        # insert key with a value of default and return default.default defaults to None.
         indices = {}
         for idx, num in enumerate(sorted(nums)):
             indices.setdefault(num, idx)
