@@ -1,3 +1,3 @@
-# coding_exercises
-Python coding training
+# Coding exercises
 
+Project for training to code
