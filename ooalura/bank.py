@@ -11,8 +11,15 @@ class Account:
     def deposit(self, value):
         self.__balance += value
 
+    def __allowed_to_withdraw(self, requested_value):
+        value_available = self.__balance + self.__overdraft_limit
+        return value_available >= requested_value
+
     def withdraw(self, value):
-        self.__balance -= value
+        if self.__allowed_to_withdraw(value):
+            self.__balance -= value
+        else:
+            print(f'Requested value ${value} above the available limit')
 
     def transfer(self, valor, allocation):
         self.withdraw(valor)
@@ -20,15 +27,11 @@ class Account:
 
     @property
     def number(self):
-        return self.__number
+        return self.__number.title()
 
     @property
     def holder(self):
         return self.__holder
-
-    @property
-    def balance(self):
-        return self.__balance
 
     @property
     def overdraft_limit(self):
