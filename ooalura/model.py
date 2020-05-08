@@ -22,9 +22,19 @@ class Program:
 
 
 class Movie(Program):
+    actor = 'Selton Melo'
+
     def __init__(self, name, year, duration):
         super().__init__(name, year)
         self.duration = duration
+
+    @classmethod
+    def info(cls):
+        return f'This s a classmethod with the brazilian actor {cls.actor}'
+
+    @staticmethod
+    def log():
+        return f'This is a staticmethod log'
 
 
 class Series(Program):
