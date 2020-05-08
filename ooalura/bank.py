@@ -41,6 +41,14 @@ class Account:
     def overdraft_limit(self, overdraft_limit):
         self.__overdraft_limit = overdraft_limit
 
+    @staticmethod
+    def bank_cod():
+        return '001'
+
+    @staticmethod
+    def banks_cods():
+        return {'BB': '001', 'Nubank': '260', 'Inter': '770'}
+
 
 class Client:
     def __init__(self, name):
