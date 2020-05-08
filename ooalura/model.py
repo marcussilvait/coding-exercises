@@ -1,46 +1,33 @@
-class Movie:
+class Program:
+    def __init__(self, name, year):
+        self._name = name
+        self.year = year
+        self._likes = 0
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        self._name = name.title()
+
+    @property
+    def likes(self):
+        return self._likes
+
+    @likes.setter
+    def likes(self, likes):
+        self._likes = likes
+
+
+class Movie(Program):
     def __init__(self, name, year, duration):
-        self.__name = name
-        self.year = year
+        super().__init__(name, year)
         self.duration = duration
-        self.__likes = 0
-
-    @property
-    def name(self):
-        return self.__name
-
-    @name.setter
-    def name(self, name):
-        self.__name = name.title()
-
-    @property
-    def likes(self):
-        return self.__likes
-
-    @likes.setter
-    def likes(self, likes):
-        self.__likes = likes
 
 
-class Series:
+class Series(Program):
     def __init__(self, name, year, seasons):
-        self.__name = name
-        self.year = year
+        super().__init__(name, year)
         self.seasons = seasons
-        self.__likes = 0
-
-    @property
-    def name(self):
-        return self.__name
-
-    @name.setter
-    def name(self, name):
-        self.__name = name.title()
-
-    @property
-    def likes(self):
-        return self.__likes
-
-    @likes.setter
-    def likes(self, likes):
-        self.__likes = likes
