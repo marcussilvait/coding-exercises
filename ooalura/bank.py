@@ -1,15 +1,15 @@
 class Account:
     def __init__(self, number, holder, balance, overdraft_limits):
-        self.number = number
-        self.holder = holder
-        self.balance = balance
-        self.overdraft_limits = overdraft_limits
+        self.__number = number
+        self.__holder = holder
+        self.__balance = balance
+        self.__overdraft_limits = overdraft_limits
 
     def statement(self):
-        print(f'{self.holder}, you have ${self.balance} Available')
+        print(f'{self.__holder}, you have ${self.__balance} Available')
 
     def deposit(self, value):
-        self.balance += value
+        self.__balance += value
 
     def withdraw(self, value):
-        self.balance -= value
+        self.__balance -= value
