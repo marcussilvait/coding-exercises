@@ -1,3 +1,3 @@
 # Coding exercises
 
-Project for training to code
+Project for coding training
