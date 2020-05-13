@@ -56,6 +56,12 @@ class Playlist:
         self.name = name
         self._programs = programs
 
+    def __getitem__(self, item):
+        return self._programs[item]
+
+    def __len__(self):
+        return len(self._programs)
+
     @property
     def programs(self):
         return self._programs
@@ -80,7 +86,7 @@ for i in range(1, 6):
 my_programs = [avengers, wick, friends, office]
 my_playlist = Playlist('weekend', my_programs)
 
-print(f'Playlist length: {my_playlist.length}')
+print(f'Playlist length: {len(my_playlist)}')
 
-for program in my_playlist.programs:
+for program in my_playlist:
     print(program)
