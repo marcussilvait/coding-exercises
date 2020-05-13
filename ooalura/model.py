@@ -51,15 +51,36 @@ class Series(Program):
         return f'{self.name}. {self.year}. {self.seasons} seasons. {self._likes} likes'
 
 
-avangers = Movie('avangers endgame', 2019, 160)
-friends = Series('frieds', 1994, 10)
+class Playlist:
+    def __init__(self, name, programs):
+        self.name = name
+        self._programs = programs
+
+    @property
+    def programs(self):
+        return self._programs
+
+    @property
+    def length(self):
+        return len(self._programs)
+
+
+avengers = Movie('avengers endgame', 2019, 160)
+wick = Movie('john wick parabellum', 2019, 180)
+friends = Series('friends', 1994, 10)
+office = Series('the office', 2004, 9)
 
 # Adding likes to programs
-avangers.like_up()
+avengers.like_up()
+wick.like_up()
 for i in range(1, 6):
     friends.like_up()
+    office.like_up()
 
-my_playlist = [avangers, friends]
+my_programs = [avengers, wick, friends, office]
+my_playlist = Playlist('weekend', my_programs)
 
-for program in my_playlist:
+print(f'Playlist length: {my_playlist.length}')
+
+for program in my_playlist.programs:
     print(program)
