@@ -18,13 +18,13 @@ def avatar_url(mocker):
     return url
 
 
-# Teste unitário
 def test_buscar_avatar(avatar_url):
+    """ Teste unitário """
     url = github_api.buscar_avatar('marvinsilva')
     assert avatar_url == url
 
 
-# Teste de integração
 def test_buscar_avatar_integracao():
+    """ Teste de integração """
     url = github_api.buscar_avatar('marcus')
     assert 'https://avatars2.githubusercontent.com/u/3090?v=4' == url
