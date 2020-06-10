@@ -69,3 +69,19 @@ docker push NOME_USUARIO/NOME_IMAGEM
 
 # baixa a imagem desejada do Docker Hub
 docker pull NOME_USUARIO/NOME_IMAGEM
+
+# mostra o ip atribuído ao container pelo docker (funciona apenas dentro do container).
+hostname -i
+
+# cria uma rede especificando o driver desejado.
+docker network create --driver bridge NOME_DA_REDE
+
+# cria um container especificando seu nome e qual rede deverá ser usada.
+docker run -it --name NOME_CONTAINER --network NOME_DA_REDE NOME_IMAGEM
+
+# egando dados de um banco em um outro container
+docker pull douglasq/alura-books:cap05
+docker pull mongo
+docker network create --driver bridge minha-rede
+docker run -d --name meu-mongo --network minha-rede mongo
+docker run --network minha-rede -d -p 8080:3000 douglasq/alura-books:cap05
