@@ -79,7 +79,7 @@ docker network create --driver bridge NOME_DA_REDE
 # cria um container especificando seu nome e qual rede deverá ser usada.
 docker run -it --name NOME_CONTAINER --network NOME_DA_REDE NOME_IMAGEM
 
-# egando dados de um banco em um outro container
+# pegando dados de um banco em um outro container
 docker pull douglasq/alura-books:cap05
 docker pull mongo
 docker network create --driver bridge minha-rede
