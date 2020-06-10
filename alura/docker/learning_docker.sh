@@ -86,6 +86,21 @@ docker network create --driver bridge minha-rede
 docker run -d --name meu-mongo --network minha-rede mongo
 docker run --network minha-rede -d -p 8080:3000 douglasq/alura-books:cap05
 
+# realiza o build dos serviços relacionados ao arquivo docker-compose.yml, assim como verifica a sua sintaxe.
+docker-compose build
+
+# sobe os serviços criados
+docker-compose up
+
+# para os serviços criados.
+docker-compose down
+
+# lista os serviços que estão rodando.
+docker-compose ps
+
+# executa o comando ping node2 dentro do container alura-books-1
+docker exec -it alura-books-1 ping node2
+
 ''' Principais comandos utilizados durante o curso de Docker
 '''
 # Comandos relacionados às informações
