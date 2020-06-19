@@ -108,6 +108,7 @@ docker version # exibe a versão do docker que está instalada.
 docker inspect ID_CONTAINER # retorna diversas informações sobre o container.
 docker ps # exibe todos os containers em execução no momento.
 docker ps -a # exibe todos os containers, independentemente de estarem em execução ou não.
+docker exec -i 6de64de3a765 /bin/bash -c 'echo "$DJANGO_SECRET_KEY"' # extrair dados da variável DJANGO_SECRET_KEY
 
 # Comandos relacionados à execução
 docker run NOME_DA_IMAGEM # cria um container com a respectiva imagem passada como parâmetro.
