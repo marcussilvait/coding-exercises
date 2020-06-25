@@ -1,5 +1,8 @@
-''' Comandos utilizados no Docker para estudo
+''' 
+    Comandos utilizados no Docker para estudo
 '''
+
+# Docker base commands: https://docs.docker.com/engine/reference/commandline/docker/
 
 # exibe a versão do docker.
 docker version
@@ -9,6 +12,7 @@ docker run NOME_DA_IMAGEM
 
 #  exibe todos os containers em execução no momento.
 docker ps
+
 
 # exibe todos os containers, independentemente de estarem em execução ou não.
 docker ps -a
