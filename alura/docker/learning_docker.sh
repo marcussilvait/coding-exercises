@@ -1,3 +1,9 @@
+Referências:
+
+- https://gist.github.com/morvanabonin/862a973c330107540f28fab0f26181d8
+- https://gist.github.com/morvanabonin/862a973c330107540f28fab0f26181d8
+- https://stack.desenvolvedor.expert/appendix/docker/comandos.html
+
 ''' 
     Comandos utilizados no Docker para estudo
 '''
