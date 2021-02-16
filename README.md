@@ -1,3 +1,3 @@
-# Coding exercises
+# coding practicing
 
-Project for coding training
+Project to improve and practice coding skills
