@@ -8,7 +8,7 @@ def kelvin_to_celsius(kelvin_temperature: float) -> float:
 
 
 def get_weather(city: str = "Toronto", country_code: str = "") -> Dict[str, Any]:
-    api_key = "ec009e0b4a68a197698765ec1758ed7c"
+    api_key = "my_secret"
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
 
     complete_url = base_url + "appid=" + api_key + "&q=" + city + "," + country_code
